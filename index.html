@@ -29,28 +29,36 @@
             }
             #nobotton {
                 background-color: #f44336;
-                position: relative; 
+                position: relative;
+            }
+            img {
+                width: 200px; /* Adjust the size of the image */
+                margin-bottom: 20px; /* Add space between the image and the question */
             }
         </style>
     </head>
     <body>
         <div>
+          
+            <img src="https://i.imgflip.com/6tci39.jpg" alt="Cute Image">
             <h1>Do you want to go out with me?</h1>
             <button id="yesbotton">Yes</button>
             <button id="nobotton">No</button>
         </div>
         <script>
+          
             document.getElementById("yesbotton").addEventListener("click", function () {
-              
+            
                 window.location.href = "success.html"; 
             });
 
+        
             const noButton = document.getElementById("nobotton");
             noButton.addEventListener("mouseover", moveButton);
             noButton.addEventListener("click", moveButton);
 
             function moveButton() {
-                const x = Math.floor(Math.random() * (window.innerWidth - 100));
+                const x = Math.floor(Math.random() * (window.innerWidth - 100)); 
                 const y = Math.floor(Math.random() * (window.innerHeight - 100)); 
                 noButton.style.left = x + "px";
                 noButton.style.top = y + "px";
